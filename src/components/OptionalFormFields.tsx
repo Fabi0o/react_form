@@ -7,7 +7,7 @@ interface Props {
 
 const OptionalFormFields: React.FC<Props> = ({ dishType }) => {
   return (
-    <div className={styles.container}>
+    <section className={styles.form_section}>
       {(dishType == "pizza" && (
         <div>
           <div>
@@ -45,7 +45,7 @@ const OptionalFormFields: React.FC<Props> = ({ dishType }) => {
             <input type="number" step="1" min="1" defaultValue="1" />
           </div>
         ))}
-    </div>
+    </section>
   );
 };
 
