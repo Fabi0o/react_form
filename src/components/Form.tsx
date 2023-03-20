@@ -1,6 +1,7 @@
-import styles from "./styles/Form.module.scss";
+import styles from "../styles/Form.module.scss";
 import { useState } from "react";
 import Dishes from "../../types/dishes";
+import OptionalFormFields from "./OptionalFormFields";
 
 const Form = () => {
   const [dishType, setDishType] = useState<Dishes>("pizza");
@@ -23,7 +24,7 @@ const Form = () => {
           name="type"
           id="type"
           onChange={(e) => {
-            console.log(e.target.value);
+            setDishType(e.target.value as Dishes);
           }}
         >
           <option value="pizza">Pizza</option>
@@ -31,6 +32,8 @@ const Form = () => {
           <option value="sandwich">Sandwich</option>
         </select>
       </div>
+
+      <OptionalFormFields dishType={dishType} />
 
       <button>Submit</button>
     </form>
