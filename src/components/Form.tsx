@@ -1,6 +1,6 @@
 import styles from "./styles/Form.module.scss";
 import { useState } from "react";
-import Dishes from "../types/dishes";
+import Dishes from "../../types/dishes";
 
 const Form = () => {
   const [dishType, setDishType] = useState<Dishes>("pizza");
