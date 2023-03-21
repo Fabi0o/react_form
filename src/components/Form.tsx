@@ -6,17 +6,43 @@ import OptionalFormFields from "./OptionalFormFields";
 const Form = () => {
   const [dishType, setDishType] = useState<Dishes>("pizza");
 
+  const [dishName, setDishName] = useState("");
+  const [preparationTime, setPreparationTime] = useState("");
+
+  const [numberOfSlices, setNumberOfSlices] = useState(1);
+  const [diameter, setDiameter] = useState(0);
+
+  const [sipciness, setSpiciness] = useState(1);
+
+  const [numberOfBreadSlices, setNumberOfBreadSlices] = useState(1);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+  };
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <section className={styles.form_section}>
         <div>
           <label htmlFor="name">Name</label>
-          <input type="text" id="name" required />
+          <input
+            type="text"
+            id="name"
+            required
+            onChange={(e) => setDishName(e.target.value)}
+          />
         </div>
 
         <div>
           <label htmlFor="preparation_time">Preparation time</label>
-          <input type="time" id="preparation_time" step="1" required />
+          <input
+            type="time"
+            id="preparation_time"
+            step="1"
+            defaultValue="00:00:00"
+            required
+            onChange={(e) => setPreparationTime(e.target.value)}
+          />
         </div>
 
         <div>
@@ -35,7 +61,13 @@ const Form = () => {
         </div>
       </section>
 
-      <OptionalFormFields dishType={dishType} />
+      <OptionalFormFields
+        dishType={dishType}
+        setNumberOfSlices={setNumberOfSlices}
+        setDiameter={setDiameter}
+        setSpiciness={setSpiciness}
+        setNumberOfBreadSlices={setNumberOfBreadSlices}
+      />
 
       <button>Submit</button>
     </form>
