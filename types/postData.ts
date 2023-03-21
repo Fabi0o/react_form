@@ -7,5 +7,5 @@ export default interface PostData {
   no_of_slices?: number;
   diameter?: number;
   spiciness_scale?: number;
-  slices_of_breads?: number;
+  slices_of_bread?: number;
 }
