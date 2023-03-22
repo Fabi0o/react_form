@@ -64,7 +64,10 @@ const Form = () => {
             min="00:00:01"
             defaultValue="00:00:01"
             required
-            onChange={(e) => setPreparationTime(e.target.value)}
+            onChange={(e) => {
+              if (e.target.value.length == 5) e.target.value += ":00";
+              setPreparationTime(e.target.value);
+            }}
           />
         </div>
 
