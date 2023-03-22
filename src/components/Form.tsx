@@ -43,7 +43,7 @@ const Form = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={styles.form}>
       <section className={styles.form_section}>
         <div>
           <label htmlFor="name">Name</label>
@@ -66,6 +66,7 @@ const Form = () => {
             required
             onChange={(e) => {
               if (e.target.value.length == 5) e.target.value += ":00";
+
               setPreparationTime(e.target.value);
             }}
           />
@@ -95,7 +96,7 @@ const Form = () => {
         setNumberOfBreadSlices={setNumberOfBreadSlices}
       />
 
-      <button>Submit</button>
+      <button className={styles.button}>Submit</button>
     </form>
   );
 };
