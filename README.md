@@ -14,7 +14,7 @@ Start with cloning this repo on your local machine:
 $ git clone https://github.com/Fabi0o/react_form.git
 $ cd react_form
 ```
-To install and set up the library, run:
+To install dependecies:
 
 ```sh
 $ npm install
