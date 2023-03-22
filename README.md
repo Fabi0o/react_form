@@ -1,5 +1,5 @@
 # react_form
-App was initialized using vite, done using React with Typescript and styled with scss modules. This project took me around 5h to make. [Live preview!](https://cheery-axolotl-844621.netlify.app/)
+App was initialized using vite, done using React with Typescript and styled with scss modules. This project took me around 5h to make. Response to the user inputs is logged to the console. [Live preview!](https://cheery-axolotl-844621.netlify.app/)
 ## NPM and Node version
 
 ```sh
